@@ -20,7 +20,7 @@ public class DiskConcurs{
 		wd.get(manager.BaseUrl + url);
 		return new DiskConcurs(manager);
 	}
-	public  Element btnTakePart=new Element("html/body/ui-view/div/ui-view/div/div[1]/div[2]/div/button");
+	public  Element btnTakePart=new Element("html/body/ui-view/div/ui-view/div/contest-participate/div[1]/div[1]/div[2]/div/button");
 	public  Element dwnPhoto=new Element(".//*/input");
 	public  Element btnSendPhoto=new Element(".//*/button[contains(text(),'Отправить')]");
 	//public  Element btnEsc=new Element("html/body/div[2]/div[2]/span");

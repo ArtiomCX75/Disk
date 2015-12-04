@@ -1,6 +1,7 @@
 package diskTests;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 
 import diskHelpers.Element;
 import diskHelpers.Files;
@@ -23,7 +24,7 @@ public class TestNewConcurs extends TestBase {
 			users[j] = "ref5_" + (j - 39) + "@freeletter.me";
 
 		int i = 1;
-		for (int k = 40; k < 122; k++) {
+		for (int k = 20; k < 122; k++) {
 			String u = users[k];
 			System.out.println(u);
 			if (u == null)
@@ -33,6 +34,7 @@ public class TestNewConcurs extends TestBase {
 			app.profile.open();
 			Element.sl(1);
 			app.profile.lnkConcurs.click();
+			app.Driver.findElement(By.xpath("html/body/ui-view/div/ui-view/div/div/div/div[1]/p/a")).click();
 			app.concurs.btnTakePart.click();
 			if (i == 1)
 				app.concurs.dwnPhoto.sendKeys(Files.jpgfile1);
@@ -48,6 +50,7 @@ public class TestNewConcurs extends TestBase {
 				app.concurs.dwnPhoto.sendKeys(Files.jpgfile6);
 				i = 1;
 			}
+			app.Driver.findElement(By.xpath("html/body/div[2]/div[2]/div/form/div/div[1]/input-placeholder/div/ng-transclude/input")).sendKeys("rqewyuerqwreqworeqyuorqewqwoyurqeworqewoqrewouqre");
 			Element.sl(3);
 			app.concurs.btnSendPhoto.click();
 			Element.sl(1);
